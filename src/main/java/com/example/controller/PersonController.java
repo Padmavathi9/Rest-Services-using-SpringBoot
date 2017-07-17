@@ -54,7 +54,7 @@ public class PersonController {
 
     @RequestMapping(value = "/api/all",
             method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE)
+            produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Collection<Person>> getAll(){
         Collection<Person> p=persons.values();
         return new ResponseEntity<Collection<Person>>(p, HttpStatus.OK);
